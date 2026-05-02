@@ -12,7 +12,7 @@ async function runScheduler() {
             'Content-Type': 'application/json'
         };
 
-        // 1. Fetch Data
+        //here,I am fetching the data
         const [depotsRes, vehiclesRes] = await Promise.all([
             fetch(`${BASE_URL}/depots`, { headers }),
             fetch(`${BASE_URL}/vehicles`, { headers })
@@ -21,7 +21,7 @@ async function runScheduler() {
         const depotsData = await depotsRes.json();
         const vehiclesData = await vehiclesRes.json();
 
-        // Check if data exists before mapping
+        // Checking if data exists before mapping
         if (!depotsData.depots || !vehiclesData.vehicles) {
             console.error("API Error Response:", { depotsData, vehiclesData });
             await log("backend", "error", "service", "Invalid API response structure");
@@ -31,7 +31,7 @@ async function runScheduler() {
         const { depots } = depotsData;
         const { vehicles } = vehiclesData;
 
-        // 2. Process each Depot (Knapsack)
+        //adding logic to Process each Depot (Knapsack)
         const results = depots.map(depot => {
             const capacity = depot.MechanicHours;
             const n = vehicles.length;
