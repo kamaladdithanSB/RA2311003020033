@@ -23,12 +23,12 @@ A mandatory monitoring layer integrated across all services.
 - **Standardized Logging**: Captures structured logs for system events, informational shifts, and critical errors to ensure full observability.
 - **Performance Monitoring**: Tracks microservice health and API interaction times.
 
-## 📸 Execution Results
+##Execution Results
 
 ### Priority Inbox Output
 The terminal output below demonstrates the weighted sorting logic successfully identifying the Top 10 most critical notifications for a student.
 
-![Priority Inbox Output](image_cfa9c6.png)
+![Priority Inbox Output](priority_output.png)
 
 ### API Verification
 Verified system connectivity and data structure through standardized API client testing, ensuring 200 OK responses and optimal response times.
@@ -38,6 +38,7 @@ Verified system connectivity and data structure through standardized API client 
 | Notifications API | ![Notifications API](notifications_api_postman_output.png) |
 | Depots API | ![Depots API](depots_api_postman_output.png) |
 | priority_output | ![priority_output](priority_output.png) |
+| Vehicle Maintenance API | ![Vehicle Maintenance API](vehicle_maintenance_scheduler_output4.png) |
 
 ## Repository Structure
 
