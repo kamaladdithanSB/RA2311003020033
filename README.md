@@ -28,49 +28,7 @@ A mandatory monitoring layer integrated across all services.
 ### Priority Inbox Output
 The terminal output below demonstrates the weighted sorting logic successfully identifying the Top 10 most critical notifications for a student.
 
-![Priority Inbox Output](priority_output.png)
 
 ### API Verification
 Verified system connectivity and data structure through standardized API client testing, ensuring 200 OK responses and optimal response times.
 
-| API | Screenshot |
-|-----|-------------|
-| Notifications API | ![Notifications API](notifications_api_postman_output.png) |
-| Depots API | ![Depots API](depots_api_postman_output.png) |
-| priority_output | ![priority_output](priority_output.png) |
-| Vehicle Maintenance API | ![Vehicle Maintenance API](vehicle_maintenance_scheduler_output4.png) |
-
-## Repository Structure
-
-logging_middleware/ # Centralized logging logic
-notification_app_be/ # Backend logic for the Priority Inbox
-vehicle_maintenance_scheduler/# Optimization algorithms for logistics
-notification_system_design.md # Detailed architectural design and scaling strategies
-
-
-## Getting Started
-
-### Prerequisites
-- Node.js / Python (depending on service)
-- PostgreSQL
-- Redis
-- RabbitMQ or Kafka (for bulk notifications)
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-repo/campus-microservices.git
-
-# Navigate to individual services
-cd notification_app_be
-npm install   # or pip install -r requirements.txt
-
-# Configure environment variables
-cp .env.example .env
-
-# Run database migrations
-npm run migrate
-
-# Start the service
-npm start
