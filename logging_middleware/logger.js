@@ -1,6 +1,5 @@
 const log = async (stack, level, pkg, message) => {
     const url = "http://20.207.122.201/evaluation-service/logs";
-    
     const payload = {
         stack: stack,   
         level: level,    
@@ -16,6 +15,7 @@ const log = async (stack, level, pkg, message) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(payload)
+            
         });
 
         if (response.ok) {
